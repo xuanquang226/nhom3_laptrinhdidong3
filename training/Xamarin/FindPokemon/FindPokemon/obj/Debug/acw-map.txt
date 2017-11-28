@@ -1,0 +1,4 @@
+FindPokemon.MainActivity, FindPokemon;md57463c52da80e05667b21198b712cd42c.MainActivity
+FindPokemon.MainActivity, FindPokemon, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md57463c52da80e05667b21198b712cd42c.MainActivity
+FindPokemon.MainActivity;md57463c52da80e05667b21198b712cd42c.MainActivity
+findpokemon.MainActivity;md57463c52da80e05667b21198b712cd42c.MainActivity

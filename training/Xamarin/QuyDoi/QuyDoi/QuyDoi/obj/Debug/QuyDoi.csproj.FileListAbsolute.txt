@@ -1,0 +1,16 @@
+C:\Users\buixu\source\repos\QuyDoi\QuyDoi\QuyDoi\bin\Debug\QuyDoi.dll
+C:\Users\buixu\source\repos\QuyDoi\QuyDoi\QuyDoi\bin\Debug\QuyDoi.pdb
+C:\Users\buixu\source\repos\QuyDoi\QuyDoi\QuyDoi\bin\Debug\Xamarin.Forms.Core.dll
+C:\Users\buixu\source\repos\QuyDoi\QuyDoi\QuyDoi\bin\Debug\Xamarin.Forms.Platform.dll
+C:\Users\buixu\source\repos\QuyDoi\QuyDoi\QuyDoi\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\Users\buixu\source\repos\QuyDoi\QuyDoi\QuyDoi\bin\Debug\Xamarin.Forms.Core.pdb
+C:\Users\buixu\source\repos\QuyDoi\QuyDoi\QuyDoi\bin\Debug\Xamarin.Forms.Core.xml
+C:\Users\buixu\source\repos\QuyDoi\QuyDoi\QuyDoi\bin\Debug\Xamarin.Forms.Platform.pdb
+C:\Users\buixu\source\repos\QuyDoi\QuyDoi\QuyDoi\bin\Debug\Xamarin.Forms.Xaml.pdb
+C:\Users\buixu\source\repos\QuyDoi\QuyDoi\QuyDoi\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\Users\buixu\source\repos\QuyDoi\QuyDoi\QuyDoi\obj\Debug\QuyDoi.csproj.CoreCompileInputs.cache
+C:\Users\buixu\source\repos\QuyDoi\QuyDoi\QuyDoi\obj\Debug\QuyDoi.MainPage.xaml.g.cs
+C:\Users\buixu\source\repos\QuyDoi\QuyDoi\QuyDoi\obj\Debug\QuyDoi.App.xaml.g.cs
+C:\Users\buixu\source\repos\QuyDoi\QuyDoi\QuyDoi\obj\Debug\QuyDoi.dll
+C:\Users\buixu\source\repos\QuyDoi\QuyDoi\QuyDoi\obj\Debug\QuyDoi.pdb
+C:\Users\buixu\source\repos\QuyDoi\QuyDoi\QuyDoi\obj\Debug\QuyDoi.csprojResolveAssemblyReference.cache

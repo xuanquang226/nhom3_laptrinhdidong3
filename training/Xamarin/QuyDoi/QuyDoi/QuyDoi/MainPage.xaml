@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:QuyDoi"
+             x:Class="QuyDoi.MainPage">
+    <AbsoluteLayout Margin ="10">
+        <Label Text="Quy đổi VND ra ngoại tệ"
+               AbsoluteLayout.LayoutBounds="80,40,240,100"
+               FontSize="20"
+               >
+        </Label>
+        <Entry x:Name="txtVND" 
+               AbsoluteLayout.LayoutBounds="10,80,340,50"
+               Placeholder="Nhập số tiền VND cần quy đổi ...."
+               Keyboard="Numeric"
+               >
+        </Entry>
+        <Label
+            Text="USD"
+            FontSize="12"
+            LineBreakMode="WordWrap"
+            AbsoluteLayout.LayoutBounds="10,180,50,20"
+            >
+        </Label>
+        <Entry x:Name="txtUSD" 
+               AbsoluteLayout.LayoutBounds="50,170,300,50"
+               Placeholder="VND->USD"
+               IsEnabled="False"
+               >
+        </Entry>
+
+        <Label
+            Text="EUR"
+            FontSize="12"
+            LineBreakMode="WordWrap"
+            AbsoluteLayout.LayoutBounds="10,230,50,20"
+            >
+        </Label>
+        <Entry x:Name="txtEuro" 
+               AbsoluteLayout.LayoutBounds="50,220,300,50"
+               Placeholder="VND->EUR"
+               IsEnabled="False"
+               >
+        </Entry>
+
+        <Label
+            Text="GBP"
+            FontSize="12"
+            LineBreakMode="WordWrap"
+            AbsoluteLayout.LayoutBounds="10,280,50,20"
+            >
+        </Label>
+        <Entry x:Name="txtBPound" 
+               AbsoluteLayout.LayoutBounds="50,270,300,50"
+               Placeholder="VND->GBP"
+               IsEnabled="False"
+               >
+        </Entry>
+
+        <Label
+            Text="JPY"
+            FontSize="12"
+            LineBreakMode="WordWrap"
+            AbsoluteLayout.LayoutBounds="10,330,50,20"
+            >
+        </Label>
+        <Entry x:Name="txtYen" 
+               AbsoluteLayout.LayoutBounds="50,320,300,50"
+               Placeholder="VND->JPY"
+               IsEnabled="False"
+               >
+        </Entry>
+        
+        <Button
+            x:Name="btnQuyDoi"
+            AbsoluteLayout.LayoutBounds="130,370,100,50"
+            Text="Thực hiện"
+            >
+        </Button>
+    </AbsoluteLayout>
+</ContentPage>

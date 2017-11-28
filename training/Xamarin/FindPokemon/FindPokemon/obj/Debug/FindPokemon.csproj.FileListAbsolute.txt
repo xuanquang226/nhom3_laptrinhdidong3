@@ -1,0 +1,15 @@
+C:\Users\buixu\source\repos\FindPokemon\FindPokemon\bin\Debug\FindPokemon.dll
+C:\Users\buixu\source\repos\FindPokemon\FindPokemon\bin\Debug\FindPokemon.pdb
+C:\Users\buixu\source\repos\FindPokemon\FindPokemon\bin\Debug\FindPokemon.FindPokemon.apk
+C:\Users\buixu\source\repos\FindPokemon\FindPokemon\bin\Debug\FindPokemon.FindPokemon-Signed.apk
+C:\Users\buixu\source\repos\FindPokemon\FindPokemon\obj\Debug\FindPokemon.csprojResolveAssemblyReference.cache
+C:\Users\buixu\source\repos\FindPokemon\FindPokemon\obj\Debug\FindPokemon.csproj.CoreCompileInputs.cache
+C:\Users\buixu\source\repos\FindPokemon\FindPokemon\obj\Debug\FindPokemon.dll
+C:\Users\buixu\source\repos\FindPokemon\FindPokemon\obj\Debug\FindPokemon.pdb
+C:\Users\buixu\source\repos\FindPokemon\FindPokemon\obj\Debug\android\bin\FindPokemon.FindPokemon.apk
+C:\Users\buixu\source\repos\FindPokemon\FindPokemon\obj\Debug\res\layout\main.xml
+C:\Users\buixu\source\repos\FindPokemon\FindPokemon\obj\Debug\res\values\strings.xml
+C:\Users\buixu\source\repos\FindPokemon\FindPokemon\obj\Debug\R.cs.flag
+C:\Users\buixu\source\repos\FindPokemon\FindPokemon\obj\Debug\uploadflags.txt
+C:\Users\buixu\source\repos\FindPokemon\FindPokemon\bin\Debug\FindPokemon.dll.mdb
+C:\Users\buixu\source\repos\FindPokemon\FindPokemon\obj\Debug\android\assets\FindPokemon.dll.mdb
