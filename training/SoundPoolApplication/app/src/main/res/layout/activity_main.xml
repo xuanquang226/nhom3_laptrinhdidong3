@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_android"
+    tools:context="com.example.nhanit.soundpoolapplication.MainActivity">
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fight"
+        android:id="@+id/button_destroy"
+        android:layout_marginStart="67dp"
+        android:onClick="playSoundDestroy"
+        tools:layout_editor_absoluteY="66dp"
+        tools:layout_editor_absoluteX="36dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="203dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Horror"
+        android:id="@+id/button_gun"
+        android:layout_alignTop="@+id/button_destroy"
+        android:layout_toRightOf="@+id/button_destroy"
+        android:layout_toEndOf="@+id/button_destroy"
+        android:layout_marginStart="74dp"
+        android:onClick="playSoundGun"
+        tools:layout_editor_absoluteY="76dp"
+        tools:layout_editor_absoluteX="271dp" />
+
+</RelativeLayout>
