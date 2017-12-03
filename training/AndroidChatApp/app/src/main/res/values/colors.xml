@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#895aed</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#352493</color>
+
+
+
+    <!-- LAYOUT_CHAT -->
+    <color name="color_bg_you">#c1aaf1</color>
+    <color name="color_bg_yourfriend">#f9ec79</color>
+    <!-- LAYOUT_LOGIN -->
+    <color name="bg_login">#895aed</color>
+    <color name="btn_bg_login">#512f9b</color>
+    <color name="text_hint">#bcbac1</color>
+    <color name="bg_white">#ffffff</color>
+</resources>
