@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">StoreVerFinal</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">List</string>
+    <string name="title_notifications">User</string>
+
+
+    <!-- Bùi Xuân Quang -->
+    <!-- Hình 1 -->
+    <string name="button_login">Đăng nhập</string>
+    <string name="button_registration">Đăng kí</string>
+    <string name="textview_home">Trang chủ</string>
+    <!-- Hình 2 -->
+    <string name="button_create_login_main">Tạo</string>
+    <!-- Hình 3 -->
+    <string name="button_registration_main">Đăng kí</string>
+    <string name="forget_password">Quên mật khẩu</string>
+    <string name="button_login_main">Đăng nhập</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="layout_user">USER</string>
+    <string name="layout_home">HOME</string>
+    <string name="layout_list">LIST</string>
+    <!-- Lê Minh Trí -->
+    <!-- Hoàn Nhật Sơn -->
+    <!-- Đặng Văn Sơn -->
+    <string name="pay">QUÝ KHÁCH HÃY ĐIỀN THÔNG TIN CHÍNH XÁC \n Để chúng tôi gửi hàng đến tận tay khách hàng</string>
+    <!-- Nguyễn Phúc Toàn -->
+    <!-- Nguyễn Thành Công -->
+    <string name="logout">Đăng xuất</string>
+    <string name="information">Thông tin</string>
+    <string name="password">Mật khẩu</string>
+    <string name="ship">Đơn hàng</string>
+    <string name="title_activity_find_password">findPassword</string>
+</resources>
