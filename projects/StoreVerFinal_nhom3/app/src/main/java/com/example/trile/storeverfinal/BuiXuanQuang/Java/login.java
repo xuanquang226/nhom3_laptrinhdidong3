@@ -172,10 +172,6 @@ public class login extends AppCompatActivity {
                 // Google Sign In was successful, authenticate with Firebase
                 GoogleSignInAccount account = result.getSignInAccount();
                 firebaseAuthWithGoogle(account);
-            } else {
-                // Google Sign In failed, update UI appropriately
-
-                // ...
             }
         }
     }
@@ -191,11 +187,11 @@ public class login extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
-                            Log.d(TAG, "Đăng nhập bằng google thành công");
+                            Toast.makeText(login.this,"Đăng nhập bằng google thành công",Toast.LENGTH_SHORT).show();
 
                         } else {
                             // If sign in fails, display a message to the user.
-                            Log.w(TAG, "Đăng nhập bằng google thất bại");
+                            Toast.makeText(login.this,"Đăng nhập bằng google thất bại",Toast.LENGTH_SHORT).show();
                         }
                         // ...
                     }
