@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">MediaApplication</string>
-    <string name="btnprevious">btnPrevious</string>
-    <string name="btnNext">btnNext</string>
-    <string name="btnPlay">Play</string>
-    <string name="btnStop">Dung</string>
-</resources>
