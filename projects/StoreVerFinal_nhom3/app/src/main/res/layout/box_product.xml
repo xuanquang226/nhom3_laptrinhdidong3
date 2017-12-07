@@ -1,0 +1,110 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.trile.storeverfinal.LeMinhTri.Java.HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="@color/colorPrimary">
+
+
+        <ImageView
+            android:id="@+id/facebook"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/box_product" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:background="@color/colorPrimary"
+        android:paddingTop="50dp">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/imageView2"
+            android:layout_marginTop="35dp"
+            android:src="@drawable/boxs" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="116dp"
+            android:layout_toStartOf="@+id/button"
+            android:src="@drawable/shipers" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignStart="@+id/imageView2"
+            android:layout_below="@+id/imageView2"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/success" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imageView3"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/imageView3"
+            android:text="(Hoàn thành)"
+            android:textColor="@color/text_white"
+            android:textSize="22dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textView"
+            android:layout_alignTop="@+id/imageView2"
+            android:layout_marginTop="10dp"
+            android:text="(Hoàn thành)"
+            android:textColor="@color/text_white"
+            android:textSize="22dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textView2"
+            android:layout_alignTop="@+id/imageView4"
+            android:layout_marginTop="10dp"
+            android:text="(Hoàn thành)"
+            android:textColor="@color/text_white"
+            android:textSize="22dp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="23dp"
+            android:background="@drawable/button_boxs"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="Chi tiết đơn hàng"
+            android:textAllCaps="false"
+            android:textColor="@color/text_black"
+            android:textSize="16dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,79 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.trile.storeverfinal.LeMinhTri.Java.HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+        <ListView
+            android:id="@+id/listViewCart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></ListView>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1">
+        <TextView
+
+            android:id="@+id/Resultmoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="Thành tiền :"
+            android:textColor="@color/text_black"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="10dp" />
+
+        <TextView
+            android:id="@+id/tv_Price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/Resultmoney"
+            android:layout_toRightOf="@id/Resultmoney"
+            android:textColor="@color/text_red"
+            android:text="790.000 đ"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/ResulProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="Tổng số lượng : "
+            android:textColor="@color/text_black"
+            android:layout_below="@id/Resultmoney"
+            android:layout_marginTop="50dp"
+            android:layout_margin="10dp"/>
+        <TextView
+            android:id="@+id/tv_Amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ResulProduct"
+            android:layout_alignBaseline="@id/ResulProduct"
+            android:textSize="18dp"
+            android:text="2"/>
+
+        <Button
+            android:id="@+id/btn_pay_cart"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Thanh toán"
+            android:layout_margin="5dp"
+            android:textAllCaps="false"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/text_white"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+
+</LinearLayout>
