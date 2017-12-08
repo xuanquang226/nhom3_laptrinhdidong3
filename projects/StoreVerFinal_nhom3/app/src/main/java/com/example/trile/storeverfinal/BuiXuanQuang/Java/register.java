@@ -1,5 +1,6 @@
 package com.example.trile.storeverfinal.BuiXuanQuang.Java;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -26,9 +27,7 @@ public class register extends AppCompatActivity {
     private Button btnSignUpR;
     private TextView txtHome;
     private FirebaseAuth mAuth;
-    private GoogleApiClient mGoogleApiClient;
-
-
+    private ProgressDialog mProgress;
 
 
     @Override
@@ -39,10 +38,16 @@ public class register extends AppCompatActivity {
         //Get FireBasae
         mAuth = FirebaseAuth.getInstance();
 
+
+        //Progressbar
+        mProgress = new ProgressDialog(this);
+        mProgress.setTitle("Đang tạo tài khoản");
+        mProgress.setMessage("Xin vui lòng chờ");
+
         //Ini
         edtEmailR = (EditText) findViewById(R.id.edtUserNameR);
         edtPassWordR = (EditText) findViewById(R.id.edtPassWordR);
-        btnSignUpR = (Button)   findViewById(R.id.btnRegister);
+        btnSignUpR = (Button) findViewById(R.id.btnRegister);
         txtHome = (TextView) findViewById(R.id.txtHome2);
 
         //Process
@@ -57,32 +62,33 @@ public class register extends AppCompatActivity {
         btnSignUpR.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 String email = edtEmailR.getText().toString().trim();
                 String password = edtPassWordR.getText().toString().trim();
 
-                if(TextUtils.isEmpty(email)){
+                if (TextUtils.isEmpty(email)) {
                     Toast.makeText(getApplicationContext(), "Nhập email", Toast.LENGTH_SHORT).show();
                     return;
-                }
-
-                if(TextUtils.isEmpty(password)){
+                } else if (TextUtils.isEmpty(password)) {
                     Toast.makeText(getApplicationContext(), "Nhập password", Toast.LENGTH_SHORT).show();
                     return;
-                }
-
-                if(password.length() < 10 || password.length() > 30){
+                } else if (password.length() < 10 || password.length() > 30) {
                     Toast.makeText(getApplicationContext(), "Nhập lại password", Toast.LENGTH_SHORT).show();
                     return;
+                } else  {
+                    mProgress.show();
                 }
 
                 //Create user
                 mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(register.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(!task.isSuccessful()){
+
+                        if (!task.isSuccessful()) {
+                            mProgress.dismiss();
                             Toast.makeText(register.this, "Tạo tài khoản thất bại",
                                     Toast.LENGTH_SHORT).show();
-                        }else{
+                        } else {
                             Toast.makeText(register.this, "Tạo tài khoản thành công", Toast.LENGTH_SHORT).show();
                             sendEmailVerification();
                             startActivity(new Intent(register.this, login_home.class));
@@ -93,14 +99,15 @@ public class register extends AppCompatActivity {
         });
     }
 
-    private void sendEmailVerification(){
+    private void sendEmailVerification() {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        if(user != null){
+        if (user != null) {
             user.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
-                    if(task.isSuccessful()){
-                        Toast.makeText(register.this, "Kiểm tra hộp thư của bạn mail xác nhận đăng ký",Toast.LENGTH_SHORT).show();
+                    if (task.isSuccessful()) {
+                        Toast.makeText(register.this, "Kiểm tra hộp thư của bạn mail xác nhận đăng ký", Toast.LENGTH_SHORT).show();
+                        mProgress.dismiss();
                         mAuth.signOut();
                     }
                 }

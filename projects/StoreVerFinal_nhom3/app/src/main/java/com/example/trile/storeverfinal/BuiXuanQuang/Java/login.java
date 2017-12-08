@@ -1,5 +1,6 @@
 package com.example.trile.storeverfinal.BuiXuanQuang.Java;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -11,6 +12,7 @@ import android.widget.Button;
 
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -46,7 +48,7 @@ public class login extends AppCompatActivity {
 
     private static final String TAG = "MAIN__ACTIVITY";
     private static final int RC_SIGN_IN = 1;
-
+    private ProgressDialog mProgress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +66,12 @@ public class login extends AppCompatActivity {
         btnSignInL = (Button) findViewById(R.id.btnSignInL);
         btnSignUpL = (Button) findViewById(R.id.btnSignUpL);
         txtForgetPass = (TextView) findViewById(R.id.txtForgetPassWord);
+
+
+        mProgress = new ProgressDialog(this);
+        mProgress.setTitle("Đang kết nối");
+        mProgress.setMessage("Vui lòng chờ");
+
 
         //Process
         txtForgetPass.setOnClickListener(new View.OnClickListener() {
@@ -83,26 +91,29 @@ public class login extends AppCompatActivity {
         btnSignInL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 String email = edtEmail.getText().toString();
                 final String password = edtPassWord.getText().toString();
 
                 if (TextUtils.isEmpty(email)) {
                     Toast.makeText(getApplicationContext(), "Nhập email!", Toast.LENGTH_SHORT).show();
                     return;
-                }
-
-                if (TextUtils.isEmpty(password)) {
+                } else if (TextUtils.isEmpty(password)) {
                     Toast.makeText(getApplicationContext(), "Nhập password!", Toast.LENGTH_SHORT).show();
                     return;
+                } else {
+                    mProgress.show();
                 }
 
                 mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(login.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
+
                         if (!task.isSuccessful()) {
                             if (password.length() < 10 || password.length() > 30) {
                                 edtPassWord.setError("Tối thiểu 10 ký tự");
                             } else {
+                                mProgress.dismiss();
                                 Toast.makeText(login.this, "Đăng nhập thất bại", Toast.LENGTH_LONG).show();
                             }
                         } else {
@@ -120,7 +131,10 @@ public class login extends AppCompatActivity {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
 
                 if (firebaseAuth.getCurrentUser() != null) {
+                    mProgress.dismiss();
                     startActivity(new Intent(login.this, MainActivity.class));
+                }else{
+                    mProgress.dismiss();
                 }
 
             }
@@ -155,10 +169,10 @@ public class login extends AppCompatActivity {
     }
 
     private void signIn() {
+        mProgress.show();
         Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
-
 
 
     @Override
@@ -172,14 +186,9 @@ public class login extends AppCompatActivity {
                 // Google Sign In was successful, authenticate with Firebase
                 GoogleSignInAccount account = result.getSignInAccount();
                 firebaseAuthWithGoogle(account);
-            } else {
-                // Google Sign In failed, update UI appropriately
-
-                // ...
             }
         }
     }
-
 
 
     private void firebaseAuthWithGoogle(GoogleSignInAccount account) {
@@ -195,7 +204,7 @@ public class login extends AppCompatActivity {
 
                         } else {
                             // If sign in fails, display a message to the user.
-                            Toast.makeText(login.this, "Đăng nhập bằng google thành công", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(login.this, "Đăng nhập bằng google thất bại", Toast.LENGTH_SHORT).show();
                         }
                         // ...
                     }
@@ -215,11 +224,13 @@ public class login extends AppCompatActivity {
 
         if (!user.isEmailVerified()) {
             mAuth.signOut();
+            mProgress.dismiss();
             Toast.makeText(login.this, "Bạn cần xác nhận email", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(login.this, emailVerification.class));
         } else {
             //Exist user
             if (mAuth.getCurrentUser() != null) {
+                mProgress.dismiss();
                 startActivity(new Intent(login.this, MainActivity.class));
                 Toast.makeText(login.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
                 finish();

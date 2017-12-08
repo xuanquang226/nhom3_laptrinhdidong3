@@ -1,5 +1,6 @@
 package com.example.trile.storeverfinal.BuiXuanQuang.Java;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -19,6 +20,7 @@ public class findPassword extends AppCompatActivity {
     private EditText edtFindPass;
     private Button btnFindPass;
     private FirebaseAuth mAuth;
+    private ProgressDialog mProgress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,9 @@ public class findPassword extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
+        mProgress = new ProgressDialog(this);
+        mProgress.setTitle("Đang xử lý");
+        mProgress.setMessage("Vui lòng chờ");
         //Ini
         edtFindPass = (EditText) findViewById(R.id.edtFindPass);
         btnFindPass = (Button) findViewById(R.id.btnFindPass);
@@ -39,15 +44,19 @@ public class findPassword extends AppCompatActivity {
                 if (TextUtils.isEmpty(email)) {
                     Toast.makeText(getApplication(), "Nhập email bạn đã đăng ký", Toast.LENGTH_SHORT).show();
                     return;
+                } else {
+                    mProgress.show();
                 }
 
                 mAuth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
+                            mProgress.dismiss();
                             Toast.makeText(findPassword.this, "Bạn kiểm tra mail để đổi lại mật khẩu", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(findPassword.this, login.class));
                         } else {
+                            mProgress.dismiss();
                             Toast.makeText(findPassword.this, "Mail không tồn tại", Toast.LENGTH_SHORT).show();
                         }
                     }
