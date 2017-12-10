@@ -31,7 +31,7 @@
         android:paddingRight="15dp"
         android:textAllCaps="false"
         android:textSize="18dp"
-        android:hint="Tên tài khoản"
+        android:hint="Nhập mail"
         android:textColorHint="@color/text_hint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
