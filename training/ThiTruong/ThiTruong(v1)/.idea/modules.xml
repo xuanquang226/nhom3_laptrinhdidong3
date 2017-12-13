@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/TestFireBase.iml" filepath="$PROJECT_DIR$/TestFireBase.iml" />
+      <module fileurl="file://C:\Users\SHNZZ\Documents\GitHub\nhom3_laptrinhdidong3\training\ThiTruong\ThiTruong(v1)\TestFireBase.iml" filepath="C:\Users\SHNZZ\Documents\GitHub\nhom3_laptrinhdidong3\training\ThiTruong\ThiTruong(v1)\TestFireBase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ThiTruong(v1).iml" filepath="$PROJECT_DIR$/ThiTruong(v1).iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\SHNZZ\Documents\GitHub\nhom3_laptrinhdidong3\training\ThiTruong\ThiTruong(v1)\app\app.iml" filepath="C:\Users\SHNZZ\Documents\GitHub\nhom3_laptrinhdidong3\training\ThiTruong\ThiTruong(v1)\app\app.iml" />
     </modules>
   </component>
 </project>
